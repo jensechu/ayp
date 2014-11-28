@@ -1,77 +1,70 @@
-<!doctype html>
+<!DOCTYPE>
 <html>
   <head>
+    <title>All Your Pants</title>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
-	<title>All Your Pants</title>
 
-	<!-- Feel free to remove this. -->
-	<!-- No U -->
-	<link rel="Shortcut Icon" href="/static/favicon.ico" type="image/x-icon" />
-
-    <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="screen" />
-
+	  <link rel="Shortcut Icon" href="/static/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
     <link rel="stylesheet" type="text/css" media="all" href="/static/fonts/css/fontello.css" />
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type='text/javascript' src='/assets/js/nav.js'></script>
-
-    </head>
+  </head>
 
   <body>
-    <div id="flavor"></div><!--Where the #flavor is.-->
-
-    <div id="ayp">
+    <div class="main-container">
     	<div id="header">
+        <a href="/" class="home" alt="All Your Pants: Home/Latest (h)">
+          <img src="/static/images/ayp_2-line.png" />
+        </a>
 
-        <h1><a href="/" class="home" title="All Your Pants: Home/Latest (h)">All Your Pants</a></h1>
+        <a class="header-advert" href="http://amongthechosen.com/" title="Among the Chosen">
+          <img alt="Ad for Among the Chosen" src="/static/images/ayp_atc.jpg">
+        </a>
+      </div>
 
-        <div class="header-box">
-          <!-- The best ad placement on the entire internet. -->
-          <a href="http://amongthechosen.com/" title="Among the Chosen"><img alt="Ad for Among the Chosen" src="/static/images/ayp_atc.jpg"></a>
-        </div><!--.header-box-->
+    	<div id="content">
+    	  {{{body}}}
+    	</div>
 
-      </div><!--#header-->
+      {{> strip_navigation }}
 
-	<div id="content">
-	  {{{body}}}
-	</div><!--#ayp-->
+    	<div id="footer">
+        <p>AYP v2 <a href="https://github.com/desert-planet/ayp" title="The Visualized Descent Into Madness.">built by #arrakis</a> (mostly <a href="http://wtf.cat/" title="wtf.cat">Muta_work</a>).  Initial graphics and CSS by <a href="http://amongthechosen.com/" title="Among the Chosen">solios</a>.</p>
+        <p>Based on <a href="http://ayp.crashnet.org/" title="All Your Pants">AYP v1</a> by <a href="http://liepins.de/" title="liepins.de">_Lasar</a>.</p>
+    	</div>
+    </div>
 
-	<div id="footer">
-          <p>AYP v2 <a href="https://github.com/desert-planet/ayp" title="The Visualized Descent Into Madness.">built by #arrakis</a> (mostly <a href="http://wtf.cat/" title="wtf.cat">Muta_work</a>).  Initial graphics and CSS by <a href="http://amongthechosen.com/" title="Among the Chosen">solios</a>.</p>
-          <p>Based on <a href="http://ayp.crashnet.org/" title="All Your Pants">AYP v1</a> by <a href="http://liepins.de/" title="liepins.de">_Lasar</a>.</p>
-	</div><!--#footer-->
-</div><!--#page-->
+    <div id="modal-container">
+      <div class="modal">
+        <h1><i class="icon-keyboard"></i> Keyboard Shortcuts</h1>
+        <ul>
+          <li><span>&larr;</span> <span>k</span> <span>p</span> Previous strip</li>
+          <li><span>&rarr;</span> <span>j</span> <span>n</span> Next strip</li>
+          <li><span>a</span> Strip archive</li>
+          <li><span>h</span> Home</li>
+          <li><span>r</span> Random strip</li>
+          <li><span>?</span> Open this dialogue</li>
+          <li><span>esc</span> Close this dialogue</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="gradient-background"></div>
 
-<div id="modal-container">
-  <div class="modal">
-    <h1><i class="icon-keyboard"></i> Keyboard Shortcuts</h1>
-    <ul>
-            <li><span>&larr;</span> <span>k</span> <span>p</span> Previous strip</li>
-            <li><span>&rarr;</span> <span>j</span> <span>n</span> Next strip</li>
-            <li><span>a</span> Strip archive</li>
-            <li><span>h</span> Home</li>
-            <li><span>r</span> Random strip</li>
-            <li><span>?</span> Open this dialogue</li>
-            <li><span>esc</span> Close this dialogue</li>
-    </ul>
-  </div>
-</div>
+    {{#if GA_ID}}
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<!-- Moved from up top.  -->
-
-  {{#if GA_ID}}
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '{{ GA_ID }}', 'auto');
-  ga('send', 'pageview');
-  </script>
-  {{/if}}
-
+    ga('create', '{{ GA_ID }}', 'auto');
+    ga('send', 'pageview');
+    </script>
+    {{/if}}
   </body>
 </html>

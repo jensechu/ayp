@@ -1,26 +1,3 @@
-<div id="page">
-<div id="comic" class="strip">
-<img src="{{ comic.url }}" alt="{{ comic.time }}" />
-</div><!--#comic.strip-->
-</div><!--#page-->
-
-<div id="nav" class="strip bottom">
-
-  <div class="pn">
-{{#if comic.prev}}
-  <a href="{{ comicUrl comic.prev }}" alt="Prev" id="prev" class="nav-prev" title="Previous Strip (&larr;)"><i class="icon-left-open icon"></i></a>
-{{/if}}
-  </div><!--.pn-->
-
-<a href="/archive/" class="archive" title="Strip Archive (a)">archive</a>
-
-<!-- vote button goes HERE! -->
-
-<a href="/random/" alt="random strip" class="random" title="Random Strip (r)">.ayp me</a>
-
-  <div class="pn">
-{{#if comic.next}}
-  <a href="{{ comicUrl comic.next }}" alt="Next" id="next" class="nav-next" title="Next Strip (&rarr;)"><i class="icon-right-open icon"></i></a>
-{{/if}}
-  </div><!--.pn-->
-</div><!--#nav.strip-->
+<div class="comic-strip">
+  <img src="{{ comic.url }}" alt="{{ comic.time }}" />
+</div>

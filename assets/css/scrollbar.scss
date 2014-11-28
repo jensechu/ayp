@@ -1,0 +1,23 @@
+/* Brown scrollbar in Chrome. */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #634c38;
+}
+
+
+::-webkit-scrollbar-thumb:active {
+  border-radius: 0px;
+  background-color: #8a6a4f;
+}
+
+::-webkit-scrollbar-corner    { background-color: #646464; color: #c8c8c8; }
+::-webkit-resizer 	{ background-color: #646464; color:#c8c8c8; }
